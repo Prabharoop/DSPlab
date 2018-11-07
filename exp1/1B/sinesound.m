@@ -1,0 +1,12 @@
+clc;
+clear all;
+close all;
+f = 1000;
+t = 1/f;
+fs = 100*f;
+ts = 1/fs;
+T = 0:ts:t;
+a = input('Enter the amplitude of the system:');
+y = a*sin(2*pi*f*T);
+p = audioplayer(y,fs);
+play(p);
